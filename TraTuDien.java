@@ -90,13 +90,14 @@ public class TraTuDien {
     	for(String i: set) {
     		String gt ="";
     		char[] s = i.toCharArray();
-    		for(int j=0; j < key.length();j++) {
-    			gt +=String.valueOf(s[j]);
+    		if(i.length() >= k .length()) {
+    			for(int j=0; j < key.length();j++) {
+        			gt +=String.valueOf(s[j]);
+        		}
+    			if(gt.equals(k)) {
+        			result += i +" : " + tuDien.get(i) + "\n";
+        		}
     		}
-    		if(gt.equals(k)) {
-    			result += i +" : " + tuDien.get(i) + "\n";
-    		}
-    		
     	}
     	return result;
     }
